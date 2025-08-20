@@ -40,7 +40,7 @@ jobs:
     - name: Set Workflow URL
       run: |
         echo "WORKFLOWURL=https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" >> $GITHUB_ENV
-        echo "Workflow URL is ${{ env.WORKFLOWURL }}"
+        echo "Workflow URL is $WORKFLOWURL"
 
     - name: Set EeveeSpotify Repo if given
       if: ${{ github.event.inputs.EEVEEREPO != '' }}
